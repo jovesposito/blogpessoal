@@ -9,7 +9,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -20,9 +19,6 @@ public class Postagem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Email
-	private String email;
 	
 	@NotBlank(message= "O atributo título é obrigatório!")
 	@Size(min= 5, max= 100, message= "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
